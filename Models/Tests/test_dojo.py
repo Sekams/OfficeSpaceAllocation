@@ -20,6 +20,16 @@ class TestDojo(unittest.TestCase):
 		self.assertTrue((type(the_dojo) is Dojo), msg='The object should be of type `Dojo`')
 
 	#Test if the class creates an accurate default model
+	def test_default_model_for_dojo(self):
+		default_dojo = Dojo()
+		self.assertEqual('Nairobi', default_dojo.location, msg='The default location for the dojo should be `Nairobi`')
+
+	#Test if the properties of the class are arranged in the proper order
+	def test_dojo_properties(self):
+		kampala = Dojo('location' : 'Kampala', 'number_of_rooms' : 20)
+		assertListEqual(['Kampala', 20], [kampala.location, kampala.number_of_rooms], 
+			msg='The location and number_of_rooms of the Dojo should be properties arranged respectively')
+
 
 if __name__=="__main__":
 	unittest.main()
