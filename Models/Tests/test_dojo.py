@@ -31,6 +31,11 @@ class TestDojo(unittest.TestCase):
                              msg='The location and number_of_rooms of the Dojo should be properties arranged '
                                  'respectively')
 
+    # Test if the get_vacant_rooms method returns the right value for the given inputs
+    def test_vacant_rooms(self):
+    	a_dojo = Dojo('Nairobi', 20, ['Room 1', 'Room 4'])
+    	self.assertEqual(18, a_dojo.get_vacant_rooms(), msg='The class has to return 18')
+
 
 if __name__ == "__main__":
     unittest.main()
