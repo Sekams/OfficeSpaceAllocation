@@ -33,7 +33,7 @@ class TestOffice(unittest.TestCase):
 
     # Test if the class assigns the right attributes to office instances
     def test_object_attributes(self):
-        self.assertEqual('Blue Office', self.blue_office.name, msg='The object name should be `Pink Living Space`')
+        self.assertEqual('Blue Office', self.blue_office.name, msg='The object name should be `Blue Office`')
 
     # Test if the get_occupants method returns the right value for the given inputs
     def test_get_occupants(self):
