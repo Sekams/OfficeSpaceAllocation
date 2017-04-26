@@ -1,4 +1,5 @@
 class Dojo(object):
+    
     """The class describes the structure of the Dojo object"""
 
     def __init__(self, *arguments):
