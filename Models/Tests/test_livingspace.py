@@ -3,6 +3,7 @@ import sys
 
 sys.path.append('..')
 from living_space import LivingSpace
+from room import Room
 from fellow import Fellow
 
 class TestLivingSpace(unittest.TestCase):
@@ -14,8 +15,8 @@ class TestLivingSpace(unittest.TestCase):
         self.tom_fellow = Fellow('Tom', 'Soyer', True)
         self.becky_fellow = Fellow('Rebecca', 'Storm', False, 'The Office')
         self.reagan_fellow = Fellow('Reagan', 'West', True, 'The Office', 'The Pad')
-        self.fellows = [tom_fellow, becky_fellow, reagan_fellow]
-        self.pink_living_space = LivingSpace('Pink Living Space', fellows)
+        self.fellows = [self.tom_fellow, self.becky_fellow, self.reagan_fellow]
+        self.pink_living_space = LivingSpace('Pink Living Space', self.fellows)
 
     # Test if the class creates an instance of itself
     def test_living_space_instance(self):
