@@ -5,7 +5,7 @@ class Room(object):
 	#This method takes an undefined number of arguments in the order type, name, occupied spaces
 	#all of which are optional
 	def __init__(self, *arguments):
-		if not not arguments:
+		if arguments:
 			# The type of the room is set as an integer where 1 = office and 2 = livingspace
 			the_type = arguments[0]
 			if the_type.lower() == 'office':

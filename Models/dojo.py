@@ -4,7 +4,7 @@ class Dojo(object):
     def __init__(self, *arguments):
         location = 'Nairobi'
         rooms = []
-        if not not arguments:
+        if arguments:
             location = arguments[0]
             if len(arguments) > 1:
                 rooms.extend(arguments[1])
