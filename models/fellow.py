@@ -1,4 +1,4 @@
-from person import Person
+from models.person import Person
 class Fellow(Person):
 
     """This class describes an instance of Fellow"""

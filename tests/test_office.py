@@ -1,11 +1,8 @@
 import unittest
-import sys
-
-sys.path.append('..')
-from office import Office
-from room import Room
-from fellow import Fellow
-from staff import Staff
+from models.office import Office
+from models.room import Room
+from models.fellow import Fellow
+from models.staff import Staff
 
 class TestOffice(unittest.TestCase):
 

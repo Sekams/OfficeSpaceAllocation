@@ -1,8 +1,5 @@
 import unittest
-import sys
-
-sys.path.append('..')
-from room import Room
+from models.room import Room
 
 class TestRoom(unittest.TestCase):
 

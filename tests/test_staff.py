@@ -1,9 +1,6 @@
 import unittest
-import sys
-
-sys.path.append('..')
-from staff import Staff
-from person import Person
+from models.staff import Staff
+from models.person import Person
 
 class TestStaff(unittest.TestCase):
 

@@ -1,10 +1,7 @@
 import unittest
-import sys
-
-sys.path.append('..')
-from living_space import LivingSpace
-from room import Room
-from fellow import Fellow
+from models.living_space import LivingSpace
+from models.room import Room
+from models.fellow import Fellow
 
 class TestLivingSpace(unittest.TestCase):
 

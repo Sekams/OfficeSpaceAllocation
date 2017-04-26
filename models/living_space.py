@@ -1,4 +1,4 @@
-from room import Room
+from models.room import Room
 class LivingSpace(Room):
 
 	"""This class describes an instance of LivingSpace"""

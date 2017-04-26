@@ -1,9 +1,6 @@
 import unittest
-import sys
-
-sys.path.append('..')
-from dojo import Dojo
-from room import Room
+from models.dojo import Dojo
+from models.room import Room
 
 
 class TestDojo(unittest.TestCase):

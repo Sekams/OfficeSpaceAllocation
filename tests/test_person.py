@@ -1,8 +1,5 @@
 import unittest
-import sys
-
-sys.path.append('..')
-from person import Person
+from models.person import Person
 
 class TestPerson(unittest.TestCase):
 
