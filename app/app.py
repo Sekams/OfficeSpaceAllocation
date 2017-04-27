@@ -10,7 +10,8 @@ the_dojo = Dojo('Nairobi')
 
 
 def create_room(room_type, *room_name_arguments):
-    if room_name_arguments:
+    output = ''
+    if room_name_arguments and (room_type.lower() == 'office' or room_type.replace(' ', '').lower() == 'livingspace'):
         for room_name in room_name_arguments:
             new_room = Room(room_type, room_name)
             if new_room not in the_dojo.rooms:
@@ -19,6 +20,8 @@ def create_room(room_type, *room_name_arguments):
                     prefix = 'A'
                     if room_type.lower() == 'office':
                         prefix = 'An'
-                    output = prefix + ' ' + room_type.lower() + ' called ' + room_name + 'has been successfully ' \
-                                                                                         'created! '
-                    # print(output)
+                    output += prefix + ' ' + room_type.lower() + ' called ' + room_name + " has been successfully " \
+                                                                                          "created! \n"
+    return output
+
+print(create_room('Living space', 'The oval office', 'the banker', 'the trumper'))
