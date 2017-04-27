@@ -4,16 +4,15 @@ from models.room import Room
 
 
 class TestDojo(unittest.TestCase):
-    
     """Test cases for the dojo class"""
 
     # Instantiating objects for using in the tests
     def setUp(self):
         self.blue_office = Room('Office', 'Blue')
         self.pink_living_space = Room('Living Space', 'Pink')
-        self.rooms = [self.blue_office, self.pink_living_space]
+        self.rooms = {self.blue_office.name: self.blue_office, self.pink_living_space.name: self.pink_living_space}
         self.the_dojo = Dojo('Nairobi', self.rooms)
-    
+
     # Test if the class creates an instance of itself
     def test_dojo_instance(self):
         self.assertIsInstance(self.the_dojo, Dojo, msg='The object should be an instance of the `Dojo` class')
@@ -36,7 +35,7 @@ class TestDojo(unittest.TestCase):
 
     # Test if the get_vacant_rooms method returns the right value for the given inputs
     def test_vacant_rooms(self):
-    	self.assertEqual(2, len(self.the_dojo.get_vacant_rooms()), msg='The class has to return a list of 2 rooms')
+        self.assertEqual(2, len(self.the_dojo.get_vacant_rooms()), msg='The class has to return a dictionary of 2 rooms')
 
 
 if __name__ == "__main__":

@@ -4,19 +4,19 @@ class Dojo(object):
 
     def __init__(self, *arguments):
         location = 'Nairobi'
-        rooms = []
+        rooms = {}
         if arguments:
             location = arguments[0]
             if len(arguments) > 1:
-                rooms.extend(arguments[1])
+                rooms = arguments[1]
         self.location = location
         self.rooms = rooms
 
-    # This method returns a list of vacant rooms in the Dojo object
+    # This method returns a dictionary of vacant rooms in the Dojo object
     def get_vacant_rooms(self):
-        result = []
-        if not not self.rooms:
-            for a_room in self.rooms:
-                if a_room.capacity > a_room.occupied_spaces:
-                    result.append(a_room)
+        result = {}
+        if self.rooms:
+            for room_name in self.rooms.keys():
+                if self.rooms[room_name].capacity > self.rooms[room_name].occupied_spaces:
+                    result[room_name] = self.rooms[room_name]
         return result

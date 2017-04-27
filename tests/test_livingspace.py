@@ -12,7 +12,9 @@ class TestLivingSpace(unittest.TestCase):
         self.tom_fellow = Fellow('Tom', 'Soyer', True)
         self.becky_fellow = Fellow('Rebecca', 'Storm', False, 'The Office')
         self.reagan_fellow = Fellow('Reagan', 'West', True, 'The Office', 'The Pad')
-        self.fellows = [self.tom_fellow, self.becky_fellow, self.reagan_fellow]
+        self.fellows = {self.tom_fellow.first_name + ' ' + self.tom_fellow.last_name: self.tom_fellow,
+                        self.becky_fellow.first_name + ' ' + self.becky_fellow.last_name: self.becky_fellow,
+                        self.reagan_fellow.first_name + ' ' + self.reagan_fellow.last_name: self.reagan_fellow}
         self.pink_living_space = LivingSpace('Pink Living Space', self.fellows)
 
     # Test if the class creates an instance of itself

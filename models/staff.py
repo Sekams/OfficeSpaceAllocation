@@ -1,9 +1,10 @@
 from models.person import Person
-class Staff(Person):
 
+
+class Staff(Person):
     """This class describes an instance of Staff"""
 
-    #This method takes an undefined number of arguments in the order first_name, last_name, office_name
+    # This method takes an undefined number of arguments in the order first_name, last_name, office_name
     def __init__(self, *arguments):
         if arguments:
             first_name = arguments[0]

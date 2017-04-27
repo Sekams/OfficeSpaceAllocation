@@ -13,7 +13,9 @@ class TestOffice(unittest.TestCase):
         self.tom_fellow = Fellow('Tom', 'Soyer', True)
         self.joe_staff = Staff('Joe', 'Swanson')
         self.becky_staff = Staff('Rebecca', 'Storm', 'The Office')
-        self.occupants = [self.tom_fellow, self.joe_staff, self.becky_staff]
+        self.occupants = {self.tom_fellow.first_name + ' ' + self.tom_fellow.last_name: self.tom_fellow,
+                          self.joe_staff.first_name + ' ' + self.joe_staff.last_name: self.joe_staff,
+                          self.becky_staff.first_name + ' ' + self.becky_staff.last_name: self.becky_staff}
         self.blue_office = Office('Blue Office', self.occupants)
 
     # Test if the class creates an instance of itself
