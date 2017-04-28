@@ -74,7 +74,7 @@ class TestAddPerson(unittest.TestCase):
         final_office_occupant_count = len(app.get_all_office_occupants())
         final_livingspace_occupant_count = len(app.get_all_livingspace_occupants())
         self.assertEqual(final_office_occupant_count - initial_office_occupant_count, 1,
-                         msg='The function should add a member a fellow to an office')
+                         msg='The function should add a fellow to an office')
         self.assertEqual(initial_livingspace_occupant_count, final_livingspace_occupant_count,
                          msg='The function should not add a member of staff to a livingspace')
 
@@ -89,3 +89,5 @@ class TestAddPerson(unittest.TestCase):
                          msg='The function should add a fellow to an office')
         self.assertEqual(final_livingspace_occupant_count - initial_livingspace_occupant_count, 1,
                          msg='The function should add a fellow to a livingspace')
+
+

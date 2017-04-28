@@ -4,22 +4,12 @@ from models.person import Person
 class Fellow(Person):
     """This class describes an instance of Fellow"""
 
-    # This method takes an undefined number of arguments in the order first_name, last_name, wants_accomodation,
-    # office_name, living_space_name all of which are optional
-    def __init__(self, *arguments):
-        if arguments:
-            first_name = arguments[0]
-            last_name = ''
-            wants_accomodation = False
-            if len(arguments) > 1:
-                last_name = arguments[1]
-            if len(arguments) > 2:
-                wants_accomodation = arguments[2]
-            if len(arguments) > 3:
-                self.office_name = arguments[3]
-            if len(arguments) > 4:
-                self.living_space_name = arguments[4]
+    # This method takes 2 required arguments in the order; first_name, last_name and 3 optional arguments in the
+    # order; wants_accomodation, office_name, living_space_name
+    def __init__(self, first_name, last_name, wants_accomodation=False, office_name='', living_space_name=''):
         Person.__init__(self, first_name, last_name, 'fellow', wants_accomodation)
+        self.office_name = office_name
+        self.living_space_name = living_space_name
 
     def reallocate_office(self, new_office_name):
         self.office_name = new_office_name

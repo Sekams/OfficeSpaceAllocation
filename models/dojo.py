@@ -2,13 +2,7 @@ class Dojo(object):
     
     """The class describes the structure of the Dojo object"""
 
-    def __init__(self, *arguments):
-        location = 'Nairobi'
-        rooms = {}
-        if arguments:
-            location = arguments[0]
-            if len(arguments) > 1:
-                rooms = arguments[1]
+    def __init__(self, location='Nairobi', rooms={}):
         self.location = location
         self.rooms = rooms
 
